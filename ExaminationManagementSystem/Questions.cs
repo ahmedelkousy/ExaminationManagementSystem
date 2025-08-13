@@ -8,21 +8,59 @@ using System.Threading.Tasks;
 
 namespace ExaminationManagementSystem
 {
+    // defines the type of question
+    public enum QuType
+    {
+        trueFales = 1,// true or false question
+        choseOne = 2 // only chose one answer
+    }
+    public enum TruFls
+    {
+        TTrue = 1,
+        FFalse = 2
+    }
 
     public abstract class Questions
     {
-
-        public Questions(string quesLvl, QuType quesHead, string quesBody, int correctAns)
+        protected Questions(QuType qHead, int correctAns)
         {
-            QLvl = quesLvl;
-            QHead = quesHead;
-            QBody = quesBody;
+            QHead = qHead;
             CorrectAns = correctAns;
         }
 
-        public string QLvl { get; set; }
         public QuType QHead { get; set; }
-        public string QBody { get; set; }
         public int CorrectAns { get; set; }
+
     }
+
+
+    // 1- true false question ------------------------------
+    class TrueFalseQu : Questions
+    {
+        public TrueFalseQu(QuType qHead, int correctAns) : base(qHead, correctAns)
+        {
+        }
+    }
+
+
+    // 2- single choice question --------------------------
+    class ChoseOneQu : Questions
+    {
+        public ChoseOneQu(QuType qHead, int correctAns) : base(qHead, correctAns)
+        {
+        }
+
+        public List<string> Opts { get; set; }
+       
+    }
+
+  
+
+
+
+
+
+
+
+
 }

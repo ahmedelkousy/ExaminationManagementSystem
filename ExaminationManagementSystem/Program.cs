@@ -8,9 +8,8 @@ namespace ExaminationManagementSystem
         {
             Mode.Welcome();
 
-
-            Teacher t = new Teacher();
-            Questions q = new TrueFalseQu("Easy", QuType.trueFales, "Is the sky blue?", 1);
+            Teacher t = new();
+            t.AddQu ()
 
 
 
