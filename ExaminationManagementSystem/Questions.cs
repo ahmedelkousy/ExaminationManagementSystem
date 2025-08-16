@@ -14,11 +14,6 @@ namespace ExaminationManagementSystem
         trueFales = 1,// true or false question
         choseOne = 2 // only chose one answer
     }
-    public enum TruOrFls
-    {
-        True = 1,
-        False = 2
-    }
 
     public abstract class Questions
     {
