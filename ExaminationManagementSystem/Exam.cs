@@ -14,10 +14,6 @@ namespace ExaminationManagementSystem
         {
             LOQ = listOfQues;
         }
-        public void AddQu(Questions q)
-        {
-            LOQ.Add(q);
-        }
 
 
     }

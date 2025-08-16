@@ -48,7 +48,7 @@ namespace ExaminationManagementSystem
 
         public override void AddQu(Questions q)
         {
-            throw new NotImplementedException();
+
         }
     }
 
@@ -57,12 +57,7 @@ namespace ExaminationManagementSystem
     //------------------------------------------------------
     class ChoseOneAns : Questions
     {
-        public ChoseOneAns(QuType qTyp, List<string> opts, int correctAnsIndex)
-        {
-            QTyp = qTyp;
-            Opts = opts;
-            CorrectAnsIndex = correctAnsIndex;
-        }
+       
 
         public ChoseOneAns(QuType qTyp, string qBody, List<string> opts , int correctAnsIndex) : base(qTyp, qBody, correctAnsIndex)
         {
@@ -73,7 +68,7 @@ namespace ExaminationManagementSystem
 
         public override void AddQu(Questions q)
         {
-            throw new NotImplementedException();
+
         }
     }
 

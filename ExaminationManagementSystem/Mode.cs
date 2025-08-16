@@ -31,7 +31,7 @@ namespace ExaminationManagementSystem
                         Console.WriteLine("You selected Teacher Mode\nPress Enter To continue");
                         Console.ReadLine();
                         Teacher teacher = new Teacher();
-                        teacher.AddQu(QuType.choseOne,"what is the capital of Egypt?" , new List<string> { "Cairo", "Alexandria", "Giza" }, 0);
+                       
 
 
                         break;
