@@ -14,44 +14,67 @@ namespace ExaminationManagementSystem
         trueFales = 1,// true or false question
         choseOne = 2 // only chose one answer
     }
-    public enum TruFls
+    public enum TruOrFls
     {
-        TTrue = 1,
-        FFalse = 2
+        True = 1,
+        False = 2
     }
 
     public abstract class Questions
     {
-        protected Questions(QuType qHead, int correctAns)
+        protected Questions(QuType qTyp, string qBody, int correctAnsIndex)
         {
-            QHead = qHead;
-            CorrectAns = correctAns;
+            QTyp = qTyp;
+            QBody = qBody;
+            CorrectAnsIndex = correctAnsIndex;
         }
 
-        public QuType QHead { get; set; }
-        public int CorrectAns { get; set; }
+        public QuType QTyp { get; set; }
+        public string QBody { get; set; }
+        public int CorrectAnsIndex { get; set; }
+
+        public abstract void AddQu(Questions q);
 
     }
 
 
     // 1- true false question ------------------------------
+    //------------------------------------------------------
     class TrueFalseQu : Questions
     {
-        public TrueFalseQu(QuType qHead, int correctAns) : base(qHead, correctAns)
+        public TrueFalseQu(QuType qTyp, string qBody, int correctAnsIndex) : base(qTyp, qBody, correctAnsIndex)
         {
+        }
+
+        public override void AddQu(Questions q)
+        {
+            throw new NotImplementedException();
         }
     }
 
 
-    // 2- single choice question --------------------------
-    class ChoseOneQu : Questions
+    // 2- single choice question ---------------------------
+    //------------------------------------------------------
+    class ChoseOneAns : Questions
     {
-        public ChoseOneQu(QuType qHead, int correctAns) : base(qHead, correctAns)
+        public ChoseOneAns(QuType qTyp, List<string> opts, int correctAnsIndex)
         {
+            QTyp = qTyp;
+            Opts = opts;
+            CorrectAnsIndex = correctAnsIndex;
+        }
+
+        public ChoseOneAns(QuType qTyp, string qBody, List<string> opts , int correctAnsIndex) : base(qTyp, qBody, correctAnsIndex)
+        {
+            Opts = opts;
         }
 
         public List<string> Opts { get; set; }
-       
+
+        public override void AddQu(Questions q)
+        {
+            throw new NotImplementedException();
+        }
     }
 
   

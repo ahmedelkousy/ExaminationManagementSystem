@@ -8,8 +8,8 @@ namespace ExaminationManagementSystem
         {
             Mode.Welcome();
 
-            Teacher t = new();
-            t.AddQu ()
+            
+           
 
 
 

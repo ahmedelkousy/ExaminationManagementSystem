@@ -27,19 +27,21 @@ namespace ExaminationManagementSystem
                 choice = Console.ReadLine();
                 switch (choice)
                 {
-                    case "1":
+                    case "1": // Teacher Mode
                         Console.WriteLine("You selected Teacher Mode\nPress Enter To continue");
                         Console.ReadLine();
                         Teacher teacher = new Teacher();
-                        teacher.AddQu(new TrueFalseQu("Easy", QuType.trueFales, "Is the sky blue?", 1));
+                        teacher.AddQu(QuType.choseOne,"what is the capital of Egypt?" , new List<string> { "Cairo", "Alexandria", "Giza" }, 0);
 
-                        // Call Teacher related methods here
+
                         break;
-                    case "2":
+
+                    case "2": // Student Mode
                         Console.WriteLine("You selected Student Mode\nPress Enter To continue");
                         Console.ReadLine();
+                        Student student = new Student();
 
-                        // Call Student related methods here
+
                         break;
                     default:
                         Console.WriteLine("Invalid choice, please chose (1) or (2) only");

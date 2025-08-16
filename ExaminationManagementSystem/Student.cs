@@ -8,5 +8,7 @@ namespace ExaminationManagementSystem
 {
     internal class Student
     {
+
+
     }
 }
