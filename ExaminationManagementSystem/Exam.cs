@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ExaminationManagementSystem
 {
-    internal class Exam
+    public class Exam
     {
-        public List<Questions> LOQ { get; set; } // List of questions (LOQ)
+        public List<Questions> LOQ = new(); // List Of Questions (LOQ)
 
-        public Exam(List<Questions> listOfQues)
+       public void AddQu(Questions q)
         {
-            LOQ = listOfQues;
+            LOQ.Add(q);
         }
 
 

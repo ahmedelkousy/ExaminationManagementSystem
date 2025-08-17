@@ -8,9 +8,20 @@ namespace ExaminationManagementSystem
         {
             Mode.Welcome();
 
-            Teacher teacher = new Teacher();
-            teacher.AddQu(QuType.trueFales,)
-           
+            
+            Exam t = new Exam();
+
+
+            t.AddQu(QuType.trueFales, "is the water liquid?", new List<string> { "True", "False" }, (int)TrOrFl.True);
+
+            t.AddQu(QuType.choseOne, "What is the capital of Egypt?",
+                  new List<string> { "Berlin", "Madrid", "Cairo", "Rome" }, 2);
+
+            foreach (Questions qu in Exam.LOQ)
+            {
+                Console.WriteLine(qu);
+            }
+
 
 
 
